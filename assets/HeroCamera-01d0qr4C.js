@@ -1,0 +1,1 @@
+import{r as t,d as m,c4 as n}from"./index-B9Y4ZT61.js";import{e as s}from"./easing-0f4db1c0.esm-CK_ArS-y.js";const c=({children:p,isMobile:o})=>{const e=t.useRef();return m((r,a)=>{s.damp3(r.camera.position,[0,0,20],.25,a),o||s.dampE(e.current.rotation,[-r.pointer.y/3,r.pointer.x/5,0],.25,a)}),n.jsx("group",{ref:e,scale:o?1:1.3,children:p})};export{c as default};

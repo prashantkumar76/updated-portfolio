@@ -1,0 +1,1 @@
+import{c4 as s}from"./index-B9Y4ZT61.js";const l=({name:a,isBeam:t=!1,containerClass:n})=>s.jsxs("button",{className:`btn ${n}`,children:[t&&s.jsxs("span",{className:"relative flex h-3 w-3",children:[s.jsx("span",{className:"btn-ping"}),s.jsx("span",{className:"btn-ping_dot"})]}),a]});export{l as default};
