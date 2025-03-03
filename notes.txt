@@ -1,0 +1,19 @@
+npm i three @react-three/fiber @react-three/drei react-responsive leva
+
+Sketchfab- to find 3d model
+
+hackroom - search it
+download it in gltf format
+
+for eslint error
+npm i @react-three/eslint-plugin --save-dev
+
+also change in eslint config plugin
+plugins: {
+      react,
+      'react-hooks': reactHooks,
+      'react-refresh': reactRefresh,
+      '@react-three': ReactThreeFiber, ----this point added
+    },
+
+    'react/no-unknown-property': 'off', also added to rule in eslint config
