@@ -1,17 +1,19 @@
-import { Canvas } from "@react-three/fiber";
-import  HackerRoom  from "../components/HackerRoom.jsx";
-import { Suspense, useEffect, useMemo, useState } from "react";
-import CanvasLoader from "../components/CanvasLoader.jsx";
-import { Leva, useControls } from "leva";
+import React, { Suspense, useState, useMemo, useEffect } from "react";
+import { Leva } from "leva";
 import { useMediaQuery } from "react-responsive";
-import { calculateSizes} from "../constants/index.js"
-import Target from "../components/Target.jsx";
-import ReactLogo from "../components/ReactLogo.jsx";
-import Cube from "../components/Cube.jsx";
-import Rings from "../components/Rings.jsx";
-import { PerspectiveCamera } from "@react-three/drei";
-import HeroCamera from "../components/HeroCamera.jsx";
-import Button from "../components/Button.jsx";
+import { calculateSizes } from "../constants/index.js";
+
+const Canvas = React.lazy(() => import("@react-three/fiber").then((mod) => ({ default: mod.Canvas })));
+const PerspectiveCamera = React.lazy(() => import("@react-three/drei").then((mod) => ({ default: mod.PerspectiveCamera })));
+const HackerRoom = React.lazy(() => import("../components/HackerRoom.jsx"));
+const CanvasLoader = React.lazy(() => import("../components/CanvasLoader.jsx"));
+const Target = React.lazy(() => import("../components/Target.jsx"));
+const ReactLogo = React.lazy(() => import("../components/ReactLogo.jsx"));
+const Cube = React.lazy(() => import("../components/Cube.jsx"));
+const Rings = React.lazy(() => import("../components/Rings.jsx"));
+const HeroCamera = React.lazy(() => import("../components/HeroCamera.jsx"));
+const Button = React.lazy(() => import("../components/Button.jsx"));
+
 const Hero = () => {
   // const controls = useControls('HackerRoom', {
   //   positionX: {
@@ -66,7 +68,7 @@ useEffect(() => {
 
   
   return (
-    <section className="min-h-screen w-full  flex flex-col relative " id='home' >
+    <section className="min-h-screen w-full  flex flex-col relative " id='' >
         <div className="w-full  mx-auto  flex  flex-col  sm:mt-36 mt-20  c-space gap-3  ">
             <p className="sm:text-3xl text-2xl font-medium text-white text-center font-generalsans" >Hi, I'm Prashant <span className="waving-hand ">👋🏻</span></p>
             <p className="hero_tag text-gray_gradient">Building Products & Brands</p>

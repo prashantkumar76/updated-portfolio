@@ -1,9 +1,11 @@
-import { Canvas } from "@react-three/fiber"
-import { workExperiences } from "../constants"
-import { OrbitControls } from "@react-three/drei"
-import { Suspense, useEffect, useRef, useState } from "react"
-import CanvasLoader from "../components/CanvasLoader"
-import Developer from "../components/Developer"
+import React, { Suspense, useState, useRef, useEffect } from "react";
+
+const Canvas = React.lazy(() => import("@react-three/fiber").then((mod) => ({ default: mod.Canvas })));
+const OrbitControls = React.lazy(() => import("@react-three/drei").then((mod) => ({ default: mod.OrbitControls })));
+const CanvasLoader = React.lazy(() => import("../components/CanvasLoader"));
+const Developer = React.lazy(() => import("../components/Developer"));
+
+import { workExperiences } from "../constants"; 
 
 const Experience = () => {    
 const [animationName, setAnimationName] = useState('idle');

@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import Globe from 'react-globe.gl';
+import React, { useState } from "react";
 
-import Button from '../components/Button.jsx';
+const Globe = React.lazy(() => import("react-globe.gl"));
+const Button = React.lazy(() => import("../components/Button.jsx"));
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
